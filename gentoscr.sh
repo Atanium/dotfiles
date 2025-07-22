@@ -2,7 +2,7 @@
 touch /etc/wpa_supplicant/wpa_supplicant.conf
 echo -e "ctrl_interface=/run/wpa_supplicant\nupdate_config=1" > /etc/wpa_supplicant/wpa_supplicant.conf
 wpa_passphrase H155-381_460D_5G 6enmq8Bt2dE >> /etc/wpa_supplicant/wpa_supplicant.conf
-wpa_supplicant -B -i wlp1s0 -c /etc/wpa_supplicant/wpa_supplicant.conf
+wpa_supplicant -B -i wlp1s0 -c /etc/wpa_supplicant/wpa_supplicant.conf dhcpcd
 sleep 10
 (echo g; echo n; echo 1; echo 2048; echo +1G; echo Y; echo t; echo 1; echo n; echo 2; echo ""; echo +16G; echo Y; echo t; echo 2; echo 19; echo n; echo 3; echo ""; echo ""; echo t; echo 3; echo 23; echo w; echo q) | fdisk /dev/nvme0n1
 mkfs.xfs /dev/nvme0n1p3
