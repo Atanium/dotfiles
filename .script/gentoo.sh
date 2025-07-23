@@ -19,7 +19,6 @@ CXXFLAGS="${COMMON_FLAGS}"
 FCFLAGS="${COMMON_FLAGS}"
 FFLAGS="${COMMON_FLAGS}"
 MAKEOPTS="-j8 -19"
-CHOST="x86_64-pc-linux-gnu"
 RUSTFLAGS="${RUSTFLAGS} -C target-cpu=native"
 GENTOO_MIRRORS="https://distfiles.gentoo.org"
 VIDEO_CARDS="amdgpu radeonsi"
@@ -37,15 +36,12 @@ mount --rbind /dev /mnt/gentoo/dev
 mount --make-rslave /mnt/gentoo/dev
 mount --bind /run /mnt/gentoo/run
 mount --make-slave /mnt/gentoo/run
-chroot /mnt/gentoo /bin/bash -c "
 
-source /etc/profile && \
+chroot /mnt/gentoo /bin/bash -c "source /etc/profile && \
 export PS1=\"(chroot) \${PS1}\" && \
 mount /dev/nvme0n1p1 /efi && \
 emerge-webrsync && \
 eselect profile set 2 && \
-emerge --oneshot app-portage/cpuid2cpuflags && \
-echo \"*/* \$(cpuid2cpuflags)\" > /etc/portage/package.use/00cpu-flags && \
 emerge --verbose --update --deep --changed-use @world && \
 emerge --depclean && \
 ln -sf ../usr/share/zoneinfo/Asia/Dubai /etc/localtime && \
@@ -79,4 +75,4 @@ exit"
 cd
 umount -l /mnt/gentoo/dev{/shm,/pts,}
 umount -R /mnt/gentoo
-reboot
+echo "Should be done, reboot"
