@@ -1,6 +1,6 @@
 #!/bin/bash
-(echo g; echo n; echo 1; echo 2048; echo +1G; echo Y; echo t; echo 1; echo n; echo 2; echo ""; echo +16G; echo Y; echo t; echo 2; echo 19; echo n; echo 3; echo ""; echo ""; echo t; echo 3; echo 23; echo w; echo q) | fdisk /dev/nvme0n1
-mkfs.xfs /dev/nvme0n1p3
+(echo g; echo n; echo 1; echo 2048; echo +1G; echo t; echo 1; echo n; echo 2; echo ""; echo +16G; echo t; echo 2; echo 19; echo n; echo 3; echo ""; echo ""; echo t; echo 3; echo 23; echo w; echo q) | fdisk /dev/nvme0n1
+mkfs.xfs -f /dev/nvme0n1p3
 mkfs.vfat -F 32 /dev/nvme0n1p1
 mkswap /dev/nvme0n1p2
 swapon /dev/nvme0n1p2
@@ -38,10 +38,11 @@ mount --make-rslave /mnt/gentoo/dev
 mount --bind /run /mnt/gentoo/run
 mount --make-slave /mnt/gentoo/run
 chroot /mnt/gentoo /bin/bash -c "
+
 source /etc/profile && \
 export PS1=\"(chroot) \${PS1}\" && \
 mount /dev/nvme0n1p1 /efi && \
-emerge --sync && \
+emerge-webrsync && \
 eselect profile set 2 && \
 emerge --oneshot app-portage/cpuid2cpuflags && \
 echo \"*/* \$(cpuid2cpuflags)\" > /etc/portage/package.use/00cpu-flags && \
@@ -72,8 +73,9 @@ emerge app-shells/bash-completion && \
 emerge net-misc/chrony && \
 rc-update add chronyd default && \
 emerge sys-block/io-scheduler-udev-rules sys-fs/xfsprogs sys-fs/dosfstools && \
-emerge net-wireless/wpa_supplicant"
-exit
+emerge net-wireless/wpa_supplicant && \
+exit"
+
 cd
 umount -l /mnt/gentoo/dev{/shm,/pts,}
 umount -R /mnt/gentoo
