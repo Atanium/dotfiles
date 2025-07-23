@@ -41,7 +41,6 @@ chroot /mnt/gentoo /bin/bash -c "source /etc/profile && \
 export PS1=\"(chroot) \${PS1}\" && \
 mount /dev/nvme0n1p1 /efi && \
 emerge-webrsync && \
-eselect profile set 2 && \
 emerge --verbose --update --deep --changed-use @world && \
 emerge --depclean && \
 ln -sf ../usr/share/zoneinfo/Asia/Dubai /etc/localtime && \
