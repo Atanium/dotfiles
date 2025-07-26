@@ -1,0 +1,254 @@
+ifconfig
+if a
+ip a
+emerge sys-kernel/linux-firmware
+sudo emerge sys-kernel/linux-firmware
+logout
+fastfetch
+nano /etc/portage/make.conf
+sudo nano /etc/portage/make.conf
+emerge --changed-use --deep @world
+sudo emerge --changed-use --deep @world
+sudo nano /etc/portage/make.conf
+sudo emerge --changed-use --deep @world
+emerge virtual/udev
+sudo emerge virtual/udev
+rc-update add udev sysinit
+rc-update add udev-trigger sysinit
+rc-update add udev-settle sysinit
+sudo rc-update add udev-settle sysinit
+sudo rc-update add udev-postmount sysinit
+sudo nano /etc/portage/make.conf
+sudo emerge --changed-use --deep @world
+sudo nano /etc/portage/make.conf
+sudo emerge --changed-use --deep @world
+sudo rc-update add dbus default
+cat cgroups dbus
+ls
+ls /supreme
+ls ~/supreme
+ls ~/
+nano ~/cgrdbus
+chmod +x ~/cgrdbus
+./cgrdbus
+sudo ./cgrdbus
+rc-update add dwjika
+rc-update del acpid
+emerge dev-libs/wayland
+sudo emerge dev-libs/wayland
+reboot
+sudo reboot
+clear
+emerge x11-base/xwayland
+sudo emerge x11-base/xwayland
+reboot
+sudo reboot
+eselect repository enable guru
+emerge app-eselect/eselect-repository
+sudo emerge app-eselect/eselect-repository
+eselect repository enable guru
+sudo eselect repository enable guru
+emaint sync -r guru
+sudo emaint sync -r guru
+emerge gui-wm/river
+sudo emerge gui-wm/river
+sudo --ask --autounmask emerge gui-wm/river
+sudo --autounmask-write --autounmask emerge gui-wm/river
+sudo emerge gui-wm/river --autounmask-write --autounmask 
+dispatch-conf
+sudo dispatch-conf
+sudo emerge gui-wm/river
+poweroff
+sudo poweroff
+sudo emerge gui-libs/xdg-desktop-portal-wlr
+sudo poweroff
+history
+emerge gui-apps/foot
+sudo emerge gui-apps/foot
+mkdir ~/.config/foot
+mkdir -p ~/.config/foot
+mkdir ~/.config/river
+wget -P ~/.config/foot/ https://raw.githubusercontent.com/Atanium/dotfiles/refs/heads/main/.config/foot.ini
+wget -P ~/.config/river/ https://raw.githubusercontent.com/Atanium/dotfiles/refs/heads/main/.config/init.bin
+chmod +x ~/.config/river/init.bin
+reboot
+sudo reboot
+dbus-run-session river
+nano ~/.config/foot/foot.ini
+nano /etc/xdg/foot/foot.ini
+cp /etc/xdg/foot/foot.ini ~/.config/foot/foot.ini
+nano ~/.config/foot/foot.ini
+reboot
+sudo reboot
+sudo poweroff
+what 
+fastfetch
+clear
+river
+ls ~/.config/river
+cd ~/.config/river
+mv init.bin init
+ls
+cd
+river
+clear
+nano /etc/portage/repos.conf
+clear
+eselect repository list
+eselect repository enable pf4public
+sudo eselect repository enable pf4public
+sudo emaint sync -r pf4public
+reboot
+sudo reboot
+clear
+nano /etc/portage/package.use
+ls /etc/portage/package.use
+nano /etc/portage/package.use/installkernel
+nano /etc/portage/package.use/ungoogled-chromium
+clear
+ls /etc/portage/package.use
+nano /etc/portage/package.use/00cpu-flags
+ls /etc/portage/package.use
+nano /etc/portage/package.use/00cpu-flags
+nano /etc/portage/package.use
+cp /etc/portage/package.use/00cpu-flags ~/Documents/tempackcpu
+ls ~/
+cp /etc/portage/package.use/00cpu-flags ~/tempackcpu
+ls ~/
+cp /etc/portage/package.use/installkernel ~/tempackern
+ls ~/
+nano tempackcpu
+nano tempackern
+rm /etc/portage/package.use/00cpu-flags
+rm /etc/portage/package.use/installkernel
+ls /etc/portage/package.use
+nano /etc/portage/package.use/00cpu-flags
+sudo rm /etc/portage/package.use/installkernel
+ls /etc/portage/package.use
+sudo rm /etc/portage/package.use/installkernel
+sudo rm /etc/portage/package.use/00cpu-flags
+ls /etc/portage/package.use
+nano /etc/portage/package.use
+sudo nano /etc/portage/package.use
+sudo nano /etc/portage/package.use/globalperpackage
+nano ~/tempackern
+sudo nano /etc/portage/package.use/globalperpackage
+ls /etc/portage/package.use
+emerge --update --deep --newuse @world
+sudo emerge --update --deep --newuse @world
+reboot
+sudo reboot
+river
+clear
+emerge www-client/ungoogled-chromium
+sudo emerge www-client/ungoogled-chromium
+sudo emerge www-client/ungoogled-chromium
+sudo emerge www-client/ungoogled-chromium
+sudo nano /etc/portage/package.use/globalperpackage
+clear
+sudo emerge www-client/ungoogled-chromium
+sudo emerge www-client/ungoogled-chromium --autounmask-write --autounmask
+dispatch-conf
+sudo dispatch-conf
+clear
+sudo nano /etc/portage/package.use/globalperpackage
+clear
+sudo emerge www-client/ungoogled-chromium
+sudo reboot
+sudo emerge app-portage/genlop
+genlop -l
+sudo genlop -l
+genlop -t ungoogled-chromium
+sudo genlop -t ungoogled-chromium
+reboot
+sudo reboot
+emerge gui-apps/fuzzel
+sudo emerge gui-apps/fuzzel
+sudo emerge gui-apps/fuzzel --autounmask --autounmask-write
+dispatch-conf
+sudo dispatch-conf
+sudo emerge gui-apps/fuzzel
+fastfetch
+lspci | grep -i audio
+alsamixer
+emerge media-sound/alsa-utils
+sudo emerge media-sound/alsa-utils
+sudo emerge media-sound/alsaconf
+alsamixer
+emerge media-libs/alsa-lib
+sudo emerge media-libs/alsa-lib
+alsaconf
+alsamixer
+reboot
+sudo reboot
+river
+alsamixer
+emaint --auto sync
+emerge --verbose --update --deep --newuse @world
+sudo emaint --auto sync
+emerge --verbose --update --deep --newuse @world
+sudo emerge --verbose --update --deep --newuse @world
+emerge --depclean
+sudo emerge --depclean
+sudo emerge app-misc/brightnessctl
+sudo emerge app-misc/brightnessctl --autounmask --autounmask-write
+dispatch-conf
+sudo dispatch-conf
+sudo emerge app-misc/brightnessctl
+nano /var/lib/portage/world
+brightnessctl
+brightnessctl set 240
+nano /etc/udev/rules.d
+
+sudo brightnessctl set 240
+groups supreme
+reboot
+sudo reboot
+river
+fastfetch
+exit
+emerge dejavu
+sudo emerge dejavu
+sudo emerge liberation-fonts
+exit
+poweroff
+sudo poweroff
+clear
+river
+sudo cp /etc/portage ~/Hoinga
+sudo -r cp /etc/portage ~/Hoinga
+sudo -R cp /etc/portage ~/Hoinga
+sudo cp -r /etc/portage ~/Hoinga
+exit
+emerge thunar 
+sudo emerge thunar 
+sudo poweroff
+river
+sudo emerge gui-app/yambar
+sudo emerge gui-apps/yambar
+yambar
+man 5 yambar
+wget https://raw.githubusercontent.com/Atanium/dotfiles/refs/heads/main/.config/config.yml
+man 5 yamber
+man 5 yambar
+cp ~/config.yml $HOME/.config/yambar/config.yml
+mkdir $HOME/.config/yambar
+cp ~/config.yml $HOME/.config/yambar/config.yml
+yambar
+nano $HOME/.config/river/init
+sudo emerge media-fonts/fontawesome
+yambar
+exit
+emerge gui-apps/yambar
+sudo emerge gui-apps/yambar
+sudo emerge gui-apps/yambar --autounmask --autounmask-write
+sudo emerge thunar 
+sudo emerge thunar --autounmask --autounmask-write
+dispatch-conf
+sudo dispatch-conf
+sudo emerge thunar 
+exit
+nano /etc/portage/make.conf
+exit
+fastfetch
+exit
