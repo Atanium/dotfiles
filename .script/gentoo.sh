@@ -32,6 +32,8 @@ eselect profile set 3
 emerge --oneshot app-portage/cpuid2cpuflags
 echo "*/* $(cpuid2cpuflags)" > /etc/portage/package.use/00cpu-flags
 
+#UPDATE YOUR MAKE.CONF FILE
+
 cat << 'EOF' > /etc/portage/make.conf
 COMMON_FLAGS="-march=native -O2 -pipe"
 CFLAGS="${COMMON_FLAGS}"
@@ -67,7 +69,10 @@ emerge --config sys-kernel/gentoo-kernel
 echo -e "/dev/nvme0n1p1   /efi        vfat    defaults     0 2\n/dev/nvme0n1p2   none         swap    sw                   0 0\n/dev/nvme0n1p3   /            xfs    defaults,noatime              0 1" >> /etc/fstab
 echo enoch > /etc/hostname
 echo -e "127.0.0.1     enoch.homenetwork enoch localhost\n::1           enoch.homenetwork enoch localhost" > /etc/hosts
+
+#--stdin DOES NOT WORK
 echo "micro8bus8tent" | passwd --stdin
+
 emerge app-admin/sysklogd
 rc-update add sysklogd default
 emerge sys-apps/mlocate
@@ -81,4 +86,4 @@ MPL
 cd
 umount -l /mnt/gentoo/dev{/shm,/pts,}
 umount -R /mnt/gentoo
-echo "Complete, please reboot."
+poweroff
