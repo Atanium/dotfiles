@@ -1,0 +1,9 @@
+sys-kernel/installkernel 
+sys-boot/uefi-mkconfig 
+app-emulation/virt-firmware
+# required by gui-wm/river (argument)
+=gui-wm/river-0.3.11 ~amd64
+# required by gui-apps/fuzzel (argument)
+=gui-apps/fuzzel-1.12.0 ~amd64
+# required by app-misc/brightnessctl (argument)
+=app-misc/brightnessctl-0.5.1 ~amd64
