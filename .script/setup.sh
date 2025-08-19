@@ -11,9 +11,8 @@ wget https://raw.githubusercontent.com/Atanium/dotfiles/refs/heads/main/.config/
 mkdir -p ~/.config/river
 mkdir ~/.config/foot
 mkdir -p ~/.config/systemd/user
-cp init ~/.config/river/init
+mv init ~/.config/river/init
 chmod +x ~/.config/river/init
-rm init
 cp /etc/xdg/foot/foot.ini ~/.config/foot/foot.ini
 
 cat > "$HOME/.config/systemd/user/riverstartup.service" <<EOF
@@ -40,6 +39,5 @@ options rtw89core disable_ps_mode=y
 EOP
 
 sudo mv rtw8852be.conf /etc/modprobe.d/
-rm rtw8852be.conf
 
 yay -S ungoogled-chromium-bin
