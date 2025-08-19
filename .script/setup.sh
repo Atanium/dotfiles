@@ -32,11 +32,14 @@ EOF
 
 #systemctl --user enable riverstartup.service
 
-sudo cat > "/etc/modprobe.d/rtw8852be.conf" <<EOP
+cat <<EOP > rtw8852be.conf
 options rtw89_pci disable_aspm_l1=y disable_aspm_l1ss=y
 options rtw89pci disable_aspm_l1=y disable_aspm_l1ss=y
 options rtw89_core disable_ps_mode=y
 options rtw89core disable_ps_mode=y
 EOP
+
+sudo mv rtw8852be.conf /etc/modprobe.d/
+rm rtw8852be.conf
 
 yay -S ungoogled-chromium-bin
