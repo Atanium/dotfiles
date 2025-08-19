@@ -12,6 +12,7 @@ mkdir -p ~/.config/river
 mkdir ~/.config/foot
 mkdir -p ~/.config/systemd/user
 cp init ~/.config/river/init
+chmod +x ~/.config/river/init
 rm init
 cp /etc/xdg/foot/foot.ini ~/.config/foot/foot.ini
 
