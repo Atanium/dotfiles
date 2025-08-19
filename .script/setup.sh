@@ -1,6 +1,8 @@
 #!/bin/bash
 sudo pacman -Syu
-sudo pacman -S --needed git base-devel nano brightnessctl river foot ttf-liberation ttf-dejavu fuzzel 
+sudo pacman -S --needed git base-devel nano brightnessctl river foot ttf-liberation ttf-dejavu fuzzel fastfetch 
+sudo chmod +s /usr/bin/reboot
+sudo chmod +s /usr/bin/poweroff
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
