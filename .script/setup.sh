@@ -29,7 +29,7 @@ RemainAfterExit=true
 WantedBy=default.target
 EOF
 
-systemctl --user enable riverstartup.service
+#systemctl --user enable riverstartup.service
 
 sudo cat > "/etc/modprobe.d/rtw8852be.conf" <<EOP
 options rtw89_pci disable_aspm_l1=y disable_aspm_l1ss=y
