@@ -1,19 +1,5 @@
 #!/bin/bash
-sudo pacman -Syu
-sudo pacman -S --needed git base-devel nano brightnessctl river foot ttf-liberation ttf-dejavu fuzzel fastfetch 
-sudo chmod +s /usr/bin/reboot
-sudo chmod +s /usr/bin/poweroff
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-cd
-wget https://raw.githubusercontent.com/Atanium/dotfiles/refs/heads/main/.config/init
-mkdir -p ~/.config/river
-mkdir ~/.config/foot
 mkdir -p ~/.config/systemd/user
-mv init ~/.config/river/init
-chmod +x ~/.config/river/init
-cp /etc/xdg/foot/foot.ini ~/.config/foot/foot.ini
 
 cat > "$HOME/.config/systemd/user/riverstartup.service" <<EOF
 [Unit]
@@ -29,7 +15,22 @@ RemainAfterExit=true
 WantedBy=default.target
 EOF
 
-#systemctl --user enable riverstartup.service
+systemctl --user enable riverstartup.service
+
+sudo pacman -Syu
+sudo pacman -S --needed git base-devel nano brightnessctl river foot ttf-liberation ttf-dejavu fuzzel fastfetch 
+sudo chmod +s /usr/bin/reboot
+sudo chmod +s /usr/bin/poweroff
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd
+wget https://raw.githubusercontent.com/Atanium/dotfiles/refs/heads/main/.config/init
+mkdir ~/.config/river
+mkdir ~/.config/foot
+mv init ~/.config/river/init
+chmod +x ~/.config/river/init
+cp /etc/xdg/foot/foot.ini ~/.config/foot/foot.ini
 
 cat <<EOP > rtw8852be.conf
 options rtw89_pci disable_aspm_l1=y disable_aspm_l1ss=y
