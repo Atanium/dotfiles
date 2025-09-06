@@ -19,8 +19,8 @@ systemctl --user enable riverstartup.service
 
 sudo pacman -Syu
 sudo pacman -S --needed git base-devel nano brightnessctl river foot ttf-liberation ttf-dejavu fuzzel fastfetch 
-sudo chmod +s /usr/bin/reboot
-sudo chmod +s /usr/bin/poweroff
+#sudo chmod +s /usr/bin/reboot
+#sudo chmod +s /usr/bin/poweroff
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
@@ -31,14 +31,15 @@ mkdir ~/.config/foot
 mv init ~/.config/river/init
 chmod +x ~/.config/river/init
 cp /etc/xdg/foot/foot.ini ~/.config/foot/foot.ini
+sed -i '11s/.*/font=monospace:size=12/' ~/.config/foot/foot.ini
 
-cat <<EOP > rtw8852be.conf
-options rtw89_pci disable_aspm_l1=y disable_aspm_l1ss=y
-options rtw89pci disable_aspm_l1=y disable_aspm_l1ss=y
-options rtw89_core disable_ps_mode=y
-options rtw89core disable_ps_mode=y
-EOP
+#cat <<EOP > rtw8852be.conf
+#options rtw89_pci disable_aspm_l1=y disable_aspm_l1ss=y
+#options rtw89pci disable_aspm_l1=y disable_aspm_l1ss=y
+#options rtw89_core disable_ps_mode=y
+#options rtw89core disable_ps_mode=y
+#EOP
 
-sudo mv rtw8852be.conf /etc/modprobe.d/
+#sudo mv rtw8852be.conf /etc/modprobe.d/
 
 yay -S ungoogled-chromium-bin
