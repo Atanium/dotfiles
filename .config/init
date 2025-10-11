@@ -10,6 +10,9 @@
 
 # Note: the "Super" modifier is also known as Logo, GUI, Windows, Mod4, etc.
 
+# Enable dual keyboard
+riverctl keyboard-layout -options "grp:alt_shift_toggle" "us,ara"
+
 # Start yambar
 riverctl spawn yambar
 
