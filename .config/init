@@ -13,6 +13,12 @@
 # Enable dual keyboard
 riverctl keyboard-layout -options "grp:alt_shift_toggle" "us,ara"
 
+# Run fastfetch through foot
+riverctl map normal Super B spawn "foot -e sh -c 'fastfetch; exec \$SHELL'"
+
+# Grim + Slurp screenshot utility
+riverctl map normal Super+Shift S spawn 'grim -g "$(slurp)" "$HOME/Downloads/screenshot$(ls $HOME/Downloads/screenshot*.png 2>/dev/null | wc -l).png"'
+
 # Start yambar
 riverctl spawn yambar
 
@@ -23,10 +29,13 @@ riverctl map normal Super D spawn fuzzel
 riverctl map normal Super+Shift Return spawn foot
 
 # Super+Shift+I to reboot
-riverctl map normal Super+Shift I spawn 'reboot'
+riverctl map normal Super+Shift I spawn 'foot -e sudo reboot'
 
-Super+Shift+O to poweroff
-riverctl map normal Super+Shift O spawn 'poweroff'
+# Super+Shift+O to poweroff
+riverctl map normal Super+Shift O spawn 'foot -e sudo poweroff'
+
+# Super+Shift+P  to sleep
+riverctl map normal Super+Shift P spawn 'foot -e sudo systemctl suspend'
 
 # Super+Q to close the focused view
 riverctl map normal Super Q close
