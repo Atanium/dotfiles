@@ -1,0 +1,66 @@
+source etc/profile
+passwd
+umount /mnt/gentoo
+poweroff
+shutdown
+reboot
+shutdown -t 1
+exit
+reboot
+nano /etc/group
+sudo
+doas
+emerge app-admin sudo
+emerge-rsync
+emerge-webrsync
+ping gnu.org
+emerge app-admin/sudo
+emerge app-admin/fastfetch
+emerge app-misc/fastfetch
+fastfetch
+nano /etc/make.conf
+nano /etc/portage/make.conf
+clear
+useradd -m -G audio,cdrom,cron,floppy,usb,video,wheel -s /bin/bash supreme
+useradd -m -G audio,cdrom,floppy,usb,video,wheel -s /bin/bash supreme
+groups supreme
+passwd supreme
+rm /stage3-*.tar.*
+nano /etc/wpa_supplicant/wpa_supplicant.conf
+wpa_passphrase H155-381_460D_5G 6enmq8Bt2dE >> /etc/wpa_supplicant/wpa_supplicant.conf
+nano /etc/conf.d/wpa_supplicant
+rc-update add dhcpcd default
+rc-update add wpa_supplicant default
+reboot
+useradd supreme sudoers
+useradd -a supreme sudoers
+visudo
+emerge sys-kernel/linux-firmware
+emerge sys-kernel/linux-firmware
+emerge sys-kernel/linux-firmware
+reboot
+fastfetch
+ping gnu.org
+
+fastfetch
+fastfetch
+fastfetch
+fastfetch
+lspci
+lspci -v
+lspci -v | less
+logout
+history
+nano /etc/modprobe.d/rtw8852be.conf
+mkdir /etc/modprobe.d/
+nano /etc/modprobe.d/rtw8852be.conf
+reboot
+fastfetch
+ping gnu.org
+exit
+fastfetch
+exit
+fastfetch
+exit
+fastfetch
+exit
