@@ -23,7 +23,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 cd
-wget https://raw.githubusercontent.com/Atanium/dotfiles/refs/heads/main/.config/init
+wget https://raw.githubusercontent.com/Atanium/dotfiles/refs/heads/main/river/init
 mkdir ~/.config/river
 mkdir ~/.config/foot
 mv init ~/.config/river/init
