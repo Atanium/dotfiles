@@ -18,7 +18,7 @@ EOF
 systemctl --user enable riverstartup.service
 
 sudo pacman -Syu
-sudo pacman -S --needed git base-devel nano brightnessctl river foot noto-fonts-emoji woff2-font-awesome ttf-liberation ttf-dejavu fuzzel fastfetch slurp grim swappy dolphin ark kate
+sudo pacman -S --needed git base-devel nano brightnessctl river-classic foot noto-fonts-emoji woff2-font-awesome ttf-liberation ttf-dejavu fuzzel fastfetch slurp grim swappy dolphin ark kate
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
