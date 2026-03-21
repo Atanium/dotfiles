@@ -189,6 +189,8 @@ bar:
 
   center:
     - clock:
+        date-format: "%d/%m/%Y"
+        time-format: "%I:%M %p"
         content:
           - string: {text: "{date}", right-margin: 5}
           - string: {text: "{time}"}
