@@ -22,6 +22,9 @@ riverctl map normal Super+Shift S spawn 'grim -g "$(slurp -d)" - | swappy -f -'
 # Start yambar
 riverctl spawn yambar
 
+# Yambar toggle
+riverctl map normal Super+Shift B spawn ~/.config/scripts/toggle-yambar.sh
+
 # Super+D to start an instance of fuzzel
 riverctl map normal Super D spawn fuzzel
 
