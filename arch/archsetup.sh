@@ -32,8 +32,14 @@ cp /etc/xdg/foot/foot.ini ~/.config/foot/foot.ini
 sed -i '11s/.*/font=monospace:size=12/' ~/.config/foot/foot.ini
 
 wget https://raw.githubusercontent.com/Atanium/dotfiles/refs/heads/main/yambar/config.yml
+wget https://raw.githubusercontent.com/Atanium/dotfiles/refs/heads/main/yambar/config-hidden.yml
+wget https://raw.githubusercontent.com/Atanium/dotfiles/refs/heads/main/scripts/toggle-yambar.sh
+chmod +x toggle-yambar.sh
 mkdir ~/.config/yambar
+mkdir ~/.config/scripts
 mv config.yml ~/.config/yambar
+mv config-hidden.yml ~/.config/yambar
+mv toggle-yambar.sh ~/.config/scripts
 
 echo "options rtw89_pci disable_clkreq=y disable_aspm_l1=y disable_aspm_l1ss=y" > 70-rtw89.conf
 sudo mv 70-rtw89.conf /usr/lib/modprobe.d/
