@@ -19,6 +19,9 @@ riverctl map normal Super B spawn "foot -e sh -c 'fastfetch; exec \$SHELL'"
 # Grim + Slurp + Swappy screenshot utility
 riverctl map normal Super+Shift S spawn 'grim -g "$(slurp -d)" - | swappy -f -'
 
+# Nuke and switch to desktop 2
+riverctl map normal None grave spawn "sh -c 'riverctl close && riverctl set-focused-tags 2'"
+
 # Start yambar
 riverctl spawn yambar
 
