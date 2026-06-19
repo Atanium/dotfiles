@@ -1,0 +1,4 @@
+cat << EOF > /etc/xbps.d/20-ungoogled-chromium.conf
+repository=https://github.com/DAINRA/ungoogled-chromium-void/releases/latest/download/
+EOF
+xbps-install -Su ungoogled-chromium
